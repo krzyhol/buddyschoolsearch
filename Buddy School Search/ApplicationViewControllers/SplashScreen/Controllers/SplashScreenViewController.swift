@@ -23,7 +23,7 @@ final class SplashScreenViewController: UIViewController {
         static let segueIdentifier = "showSearchVC"
     }
     
-    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet private weak var logoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

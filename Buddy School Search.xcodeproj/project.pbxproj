@@ -10,6 +10,11 @@
 		513CD66C1F39CBA400A35E9A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD66B1F39CBA400A35E9A /* SplashScreenViewController.swift */; };
 		513CD6721F39CD9100A35E9A /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6711F39CD9100A35E9A /* UIColor+AppColors.swift */; };
 		513CD6761F39D82500A35E9A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6751F39D82500A35E9A /* SearchViewController.swift */; };
+		513CD67B1F3A50CD00A35E9A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6791F3A50CD00A35E9A /* ProfileCell.swift */; };
+		513CD67C1F3A50CD00A35E9A /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 513CD67A1F3A50CD00A35E9A /* ProfileCell.xib */; };
+		513CD67E1F3A53F600A35E9A /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD67D1F3A53F600A35E9A /* UITableView+RegisterCells.swift */; };
+		513CD6811F3A566C00A35E9A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD67F1F3A566C00A35E9A /* InfoCell.swift */; };
+		513CD6821F3A566C00A35E9A /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 513CD6801F3A566C00A35E9A /* InfoCell.xib */; };
 		51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF452F1F3876A60011FE53 /* AppDelegate.swift */; };
 		51BF45351F3876A60011FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45331F3876A60011FE53 /* Main.storyboard */; };
 		51BF45371F3876A60011FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45361F3876A60011FE53 /* Assets.xcassets */; };
@@ -22,6 +27,11 @@
 		513CD66B1F39CBA400A35E9A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreenViewController.swift; path = ApplicationViewControllers/SplashScreen/Controllers/SplashScreenViewController.swift; sourceTree = "<group>"; };
 		513CD6711F39CD9100A35E9A /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+AppColors.swift"; path = "Helpers/Extensions/UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		513CD6751F39D82500A35E9A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ApplicationViewControllers/Search/SearchViewController.swift; sourceTree = "<group>"; };
+		513CD6791F3A50CD00A35E9A /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileCell.swift; path = ApplicationViewControllers/Search/Views/ProfileCell.swift; sourceTree = "<group>"; };
+		513CD67A1F3A50CD00A35E9A /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileCell.xib; path = ApplicationViewControllers/Search/Views/ProfileCell.xib; sourceTree = "<group>"; };
+		513CD67D1F3A53F600A35E9A /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+RegisterCells.swift"; path = "Helpers/Extensions/UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
+		513CD67F1F3A566C00A35E9A /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoCell.swift; path = ApplicationViewControllers/Search/Views/InfoCell.swift; sourceTree = "<group>"; };
+		513CD6801F3A566C00A35E9A /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoCell.xib; path = ApplicationViewControllers/Search/Views/InfoCell.xib; sourceTree = "<group>"; };
 		51BF452C1F3876A60011FE53 /* Buddy School Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddy School Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF452F1F3876A60011FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BF45341F3876A60011FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				513CD6711F39CD9100A35E9A /* UIColor+AppColors.swift */,
+				513CD67D1F3A53F600A35E9A /* UITableView+RegisterCells.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -79,9 +90,21 @@
 		513CD6741F39D7FA00A35E9A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				513CD6781F3A50A400A35E9A /* Views */,
 				513CD6751F39D82500A35E9A /* SearchViewController.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		513CD6781F3A50A400A35E9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				513CD6791F3A50CD00A35E9A /* ProfileCell.swift */,
+				513CD67A1F3A50CD00A35E9A /* ProfileCell.xib */,
+				513CD67F1F3A566C00A35E9A /* InfoCell.swift */,
+				513CD6801F3A566C00A35E9A /* InfoCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		51BF45231F3876A60011FE53 = {
@@ -214,6 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51BF453A1F3876A60011FE53 /* LaunchScreen.storyboard in Resources */,
+				513CD6821F3A566C00A35E9A /* InfoCell.xib in Resources */,
+				513CD67C1F3A50CD00A35E9A /* ProfileCell.xib in Resources */,
 				51BF45371F3876A60011FE53 /* Assets.xcassets in Resources */,
 				51BF45351F3876A60011FE53 /* Main.storyboard in Resources */,
 			);
@@ -274,10 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513CD67E1F3A53F600A35E9A /* UITableView+RegisterCells.swift in Sources */,
 				513CD6721F39CD9100A35E9A /* UIColor+AppColors.swift in Sources */,
 				51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */,
 				513CD6761F39D82500A35E9A /* SearchViewController.swift in Sources */,
 				513CD66C1F39CBA400A35E9A /* SplashScreenViewController.swift in Sources */,
+				513CD67B1F3A50CD00A35E9A /* ProfileCell.swift in Sources */,
+				513CD6811F3A566C00A35E9A /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
