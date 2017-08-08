@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513CD66C1F39CBA400A35E9A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD66B1F39CBA400A35E9A /* SplashScreenViewController.swift */; };
+		513CD6721F39CD9100A35E9A /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6711F39CD9100A35E9A /* UIColor+AppColors.swift */; };
 		51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF452F1F3876A60011FE53 /* AppDelegate.swift */; };
-		51BF45321F3876A60011FE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF45311F3876A60011FE53 /* ViewController.swift */; };
 		51BF45351F3876A60011FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45331F3876A60011FE53 /* Main.storyboard */; };
 		51BF45371F3876A60011FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45361F3876A60011FE53 /* Assets.xcassets */; };
 		51BF453A1F3876A60011FE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45381F3876A60011FE53 /* LaunchScreen.storyboard */; };
@@ -17,9 +18,10 @@
 
 /* Begin PBXFileReference section */
 		2A48DF7EF2F53CA5D0C1B952 /* Pods-Buddy School Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddy School Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buddy School Search/Pods-Buddy School Search.debug.xcconfig"; sourceTree = "<group>"; };
+		513CD66B1F39CBA400A35E9A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreenViewController.swift; path = ApplicationViewControllers/SplashScreen/Controllers/SplashScreenViewController.swift; sourceTree = "<group>"; };
+		513CD6711F39CD9100A35E9A /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+AppColors.swift"; path = "Helpers/Extensions/UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		51BF452C1F3876A60011FE53 /* Buddy School Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddy School Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF452F1F3876A60011FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51BF45311F3876A60011FE53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		51BF45341F3876A60011FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51BF45361F3876A60011FE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BF45391F3876A60011FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		513CD6681F39CB1C00A35E9A /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				513CD6691F39CB2A00A35E9A /* Controllers */,
+			);
+			name = SplashScreen;
+			sourceTree = "<group>";
+		};
+		513CD6691F39CB2A00A35E9A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				513CD66B1F39CBA400A35E9A /* SplashScreenViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		513CD66F1F39CD3C00A35E9A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				513CD6701F39CD4800A35E9A /* Extensions */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		513CD6701F39CD4800A35E9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				513CD6711F39CD9100A35E9A /* UIColor+AppColors.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		51BF45231F3876A60011FE53 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +106,7 @@
 				51BF452F1F3876A60011FE53 /* AppDelegate.swift */,
 				51BF45331F3876A60011FE53 /* Main.storyboard */,
 				51BF45411F3876CC0011FE53 /* ApplicationViewControllers */,
+				513CD66F1F39CD3C00A35E9A /* Helpers */,
 				51BF45421F3876E10011FE53 /* Resources */,
 				51BF45431F3877010011FE53 /* SupportingFiles */,
 			);
@@ -81,7 +116,7 @@
 		51BF45411F3876CC0011FE53 /* ApplicationViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				51BF45311F3876A60011FE53 /* ViewController.swift */,
+				513CD6681F39CB1C00A35E9A /* SplashScreen */,
 			);
 			name = ApplicationViewControllers;
 			sourceTree = "<group>";
@@ -236,8 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BF45321F3876A60011FE53 /* ViewController.swift in Sources */,
+				513CD6721F39CD9100A35E9A /* UIColor+AppColors.swift in Sources */,
 				51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */,
+				513CD66C1F39CBA400A35E9A /* SplashScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +441,7 @@
 				51BF45401F3876A60011FE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
