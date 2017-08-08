@@ -11,6 +11,7 @@ import UIKit
 final class SplashScreenViewController: UIViewController {
 
     private struct ViewConstants {
+        static let backgroundColor: UIColor = .lightBlue
         static let duration = 1.0
         static let delay = 0.0
         static let startAlpha: CGFloat = 0.0
@@ -19,6 +20,7 @@ final class SplashScreenViewController: UIViewController {
         static let startScale = CGAffineTransform(scaleX: 4.0, y: 4.0)
         static let middleScale = CGAffineTransform(scaleX: 0.75, y: 0.75)
         static let endScale = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        static let segueIdentifier = "showSearchVC"
     }
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -26,24 +28,29 @@ final class SplashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .lightBlue
+        view.backgroundColor = ViewConstants.backgroundColor
         animateLogo()
     }
     
     private func animateLogo() {
-        logoImageView.alpha = ViewConstants.startAlpha
-        logoImageView.transform = ViewConstants.startScale
+        changeLogoState(withAlpha: ViewConstants.startAlpha, andTransform: ViewConstants.startScale)
         
         UIView.animate(withDuration: ViewConstants.duration, delay: ViewConstants.delay, options: .curveEaseOut, animations: { [weak self] in
-            self?.logoImageView.alpha = ViewConstants.middleAlpha
-            self?.logoImageView.transform = ViewConstants.middleScale
+            guard let weakSelf = self else { return }
+            weakSelf.changeLogoState(withAlpha: ViewConstants.middleAlpha, andTransform: ViewConstants.middleScale)
         }) { finished in
             UIView.animate(withDuration: ViewConstants.duration, animations: { [weak self] in
-                self?.logoImageView.alpha = ViewConstants.endAlpha
-                self?.logoImageView.transform = ViewConstants.endScale
-            }) { finished in
-                // next step
+                guard let weakSelf = self else { return }
+                weakSelf.changeLogoState(withAlpha: ViewConstants.endAlpha, andTransform: ViewConstants.endScale)
+            }) { [weak self] finished in
+                guard let weakSelf = self else { return }
+                weakSelf.performSegue(withIdentifier: ViewConstants.segueIdentifier, sender: nil)
             }
         }
+    }
+    
+    private func changeLogoState(withAlpha alpha: CGFloat, andTransform transform: CGAffineTransform) {
+        logoImageView.alpha = alpha
+        logoImageView.transform = transform
     }
 }

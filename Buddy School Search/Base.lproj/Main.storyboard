@@ -36,13 +36,67 @@
                             <constraint firstItem="7Qw-Uk-m0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jtl-7E-oNi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u6F-kR-xLi"/>
                     <connections>
                         <outlet property="logoImageView" destination="7Qw-Uk-m0c" id="alL-pH-3NH"/>
+                        <segue destination="aQL-DE-aTX" kind="show" identifier="showSearchVC" id="6Ir-SI-a1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="yE1-FF-rZg">
+            <objects>
+                <viewController id="nhW-wx-uFf" customClass="SearchViewController" customModule="Buddy_School_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="efM-z2-1J5"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Bk-F3-See"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vEA-hu-Kf0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ja3-Io-GYY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ja3-Io-GYY" firstAttribute="bottom" secondItem="2Bk-F3-See" secondAttribute="top" id="92D-Ep-mnM"/>
+                            <constraint firstItem="ja3-Io-GYY" firstAttribute="top" secondItem="vEA-hu-Kf0" secondAttribute="top" id="FFx-jw-VTR"/>
+                            <constraint firstAttribute="trailing" secondItem="ja3-Io-GYY" secondAttribute="trailing" id="FKu-YN-ycx"/>
+                            <constraint firstItem="ja3-Io-GYY" firstAttribute="leading" secondItem="vEA-hu-Kf0" secondAttribute="leading" id="Ym6-gT-e87"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="yVO-Fh-VMY"/>
+                    <connections>
+                        <outlet property="resultTableView" destination="ja3-Io-GYY" id="Yw1-tt-rPq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PFV-nF-Qf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kZf-eZ-t0e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aQL-DE-aTX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z1n-lL-Zzn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nhW-wx-uFf" kind="relationship" relationship="rootViewController" id="LQc-fF-nem"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0B7-SA-hmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
