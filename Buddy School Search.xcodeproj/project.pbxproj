@@ -15,6 +15,7 @@
 		513CD67E1F3A53F600A35E9A /* UITableView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD67D1F3A53F600A35E9A /* UITableView+RegisterCells.swift */; };
 		513CD6811F3A566C00A35E9A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD67F1F3A566C00A35E9A /* InfoCell.swift */; };
 		513CD6821F3A566C00A35E9A /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 513CD6801F3A566C00A35E9A /* InfoCell.xib */; };
+		513CD68A1F3B10E500A35E9A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6891F3B10E500A35E9A /* Router.swift */; };
 		51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF452F1F3876A60011FE53 /* AppDelegate.swift */; };
 		51BF45351F3876A60011FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45331F3876A60011FE53 /* Main.storyboard */; };
 		51BF45371F3876A60011FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45361F3876A60011FE53 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		513CD67D1F3A53F600A35E9A /* UITableView+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+RegisterCells.swift"; path = "Helpers/Extensions/UITableView+RegisterCells.swift"; sourceTree = "<group>"; };
 		513CD67F1F3A566C00A35E9A /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoCell.swift; path = ApplicationViewControllers/Search/Views/InfoCell.swift; sourceTree = "<group>"; };
 		513CD6801F3A566C00A35E9A /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoCell.xib; path = ApplicationViewControllers/Search/Views/InfoCell.xib; sourceTree = "<group>"; };
+		513CD6891F3B10E500A35E9A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router.swift; sourceTree = "<group>"; };
 		51BF452C1F3876A60011FE53 /* Buddy School Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddy School Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF452F1F3876A60011FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BF45341F3876A60011FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		513CD6861F3B104A00A35E9A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				513CD6891F3B10E500A35E9A /* Router.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		51BF45231F3876A60011FE53 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 				51BF45331F3876A60011FE53 /* Main.storyboard */,
 				51BF45411F3876CC0011FE53 /* ApplicationViewControllers */,
 				513CD66F1F39CD3C00A35E9A /* Helpers */,
+				513CD6861F3B104A00A35E9A /* Networking */,
 				51BF45421F3876E10011FE53 /* Resources */,
 				51BF45431F3877010011FE53 /* SupportingFiles */,
 			);
@@ -299,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513CD68A1F3B10E500A35E9A /* Router.swift in Sources */,
 				513CD67E1F3A53F600A35E9A /* UITableView+RegisterCells.swift in Sources */,
 				513CD6721F39CD9100A35E9A /* UIColor+AppColors.swift in Sources */,
 				51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */,
