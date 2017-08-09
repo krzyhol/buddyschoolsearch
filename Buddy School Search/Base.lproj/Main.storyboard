@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
-        <!--Search-->
+        <!--Buddy School-->
         <scene sceneID="yE1-FF-rZg">
             <objects>
                 <viewController id="nhW-wx-uFf" customClass="SearchViewController" customModule="Buddy_School_Search" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <constraint firstItem="ja3-Io-GYY" firstAttribute="leading" secondItem="vEA-hu-Kf0" secondAttribute="leading" id="Ym6-gT-e87"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="yVO-Fh-VMY"/>
+                    <navigationItem key="navigationItem" title="Buddy School" id="yVO-Fh-VMY"/>
                     <connections>
                         <outlet property="resultTableView" destination="ja3-Io-GYY" id="Yw1-tt-rPq"/>
                     </connections>

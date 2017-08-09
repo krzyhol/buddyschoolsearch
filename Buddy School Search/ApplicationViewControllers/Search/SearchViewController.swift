@@ -16,12 +16,27 @@ final class SearchViewController: UIViewController {
         static let noMatchesInfoText = "No matches found for current search."
     }
     
+    private let searchController = UISearchController(searchResultsController: nil)
+    
     @IBOutlet private weak var resultTableView: UITableView! {
         didSet {
             resultTableView.delegate = self
             resultTableView.dataSource = self
             resultTableView.registerCells([ProfileCell.self, InfoCell.self])
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setSearchControllerProperties()
+    }
+    
+    private func setSearchControllerProperties() {
+        //        searchController.searchResultsUpdater = self // Will be used later
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        resultTableView.tableHeaderView = searchController.searchBar
     }
 }
 
