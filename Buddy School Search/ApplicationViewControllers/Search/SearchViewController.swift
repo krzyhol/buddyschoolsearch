@@ -70,7 +70,9 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         if let profiles = profiles, !profiles.isEmpty {
-            cell = tableView.dequeueReusableCell(withIdentifier: ViewConstants.reusableProfileCellIdentifier, for: indexPath) as! ProfileCell
+            let profileCell = tableView.dequeueReusableCell(withIdentifier: ViewConstants.reusableProfileCellIdentifier, for: indexPath) as! ProfileCell
+            profileCell.decorate(withProfile: profiles[indexPath.row])
+            cell = profileCell
         } else {
             let infoCell = tableView.dequeueReusableCell(withIdentifier: ViewConstants.reusableInfoCellIdentifier, for: indexPath) as! InfoCell
             infoCell.decorate(withText: ViewConstants.noMatchesInfoText)

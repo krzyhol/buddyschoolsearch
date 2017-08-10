@@ -63,6 +63,12 @@
                     <constraint firstAttribute="bottom" secondItem="Xp7-dx-7Mu" secondAttribute="bottom" constant="8" id="wMB-iH-nye"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="priceLabel" destination="ra3-vo-2uC" id="20E-Ja-swj"/>
+                <outlet property="profileImageView" destination="xnR-IA-1z4" id="1lx-Ie-hOk"/>
+                <outlet property="profileLabel" destination="SZf-Yc-TxK" id="4yM-4e-P0J"/>
+                <outlet property="teacherLabel" destination="hzK-YI-wFn" id="big-IZ-AVv"/>
+            </connections>
             <point key="canvasLocation" x="34" y="69"/>
         </tableViewCell>
     </objects>
