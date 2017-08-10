@@ -20,6 +20,14 @@ final class ProfileCell: UITableViewCell {
         teacherLabel.text = profile.teacherLogin
         profileLabel.text = profile.profileTitle
         priceLabel.text = profile.profilePrice
+        fetchImage(withURL: profile.teacherPhotoUrl)
+    }
+    
+    private func fetchImage(withURL imageURL: URL?) {
+        guard let url = imageURL else { return }
+        let urlContents = try? Data(contentsOf: url)
+        guard let imageData = urlContents else { return }
+        profileImageView.image = UIImage(data: imageData)
     }
     
     class var defaultHeight: CGFloat {
