@@ -16,6 +16,9 @@
 		513CD6811F3A566C00A35E9A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD67F1F3A566C00A35E9A /* InfoCell.swift */; };
 		513CD6821F3A566C00A35E9A /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 513CD6801F3A566C00A35E9A /* InfoCell.xib */; };
 		513CD68A1F3B10E500A35E9A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6891F3B10E500A35E9A /* Router.swift */; };
+		513CD68C1F3C6DF500A35E9A /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD68B1F3C6DF500A35E9A /* SearchService.swift */; };
+		513CD68F1F3C731B00A35E9A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD68E1F3C731B00A35E9A /* Profile.swift */; };
+		513CD6921F3C782B00A35E9A /* APIEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513CD6911F3C782B00A35E9A /* APIEnums.swift */; };
 		51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF452F1F3876A60011FE53 /* AppDelegate.swift */; };
 		51BF45351F3876A60011FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45331F3876A60011FE53 /* Main.storyboard */; };
 		51BF45371F3876A60011FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45361F3876A60011FE53 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		513CD67F1F3A566C00A35E9A /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoCell.swift; path = ApplicationViewControllers/Search/Views/InfoCell.swift; sourceTree = "<group>"; };
 		513CD6801F3A566C00A35E9A /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoCell.xib; path = ApplicationViewControllers/Search/Views/InfoCell.xib; sourceTree = "<group>"; };
 		513CD6891F3B10E500A35E9A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router.swift; sourceTree = "<group>"; };
+		513CD68B1F3C6DF500A35E9A /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchService.swift; path = Networking/SearchService.swift; sourceTree = "<group>"; };
+		513CD68E1F3C731B00A35E9A /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = Models/Profile.swift; sourceTree = "<group>"; };
+		513CD6911F3C782B00A35E9A /* APIEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIEnums.swift; path = Enums/APIEnums.swift; sourceTree = "<group>"; };
 		51BF452C1F3876A60011FE53 /* Buddy School Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddy School Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF452F1F3876A60011FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BF45341F3876A60011FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,8 +119,25 @@
 			isa = PBXGroup;
 			children = (
 				513CD6891F3B10E500A35E9A /* Router.swift */,
+				513CD68B1F3C6DF500A35E9A /* SearchService.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		513CD68D1F3C72E900A35E9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				513CD68E1F3C731B00A35E9A /* Profile.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		513CD6901F3C780A00A35E9A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				513CD6911F3C782B00A35E9A /* APIEnums.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 		51BF45231F3876A60011FE53 = {
@@ -141,7 +164,9 @@
 				51BF452F1F3876A60011FE53 /* AppDelegate.swift */,
 				51BF45331F3876A60011FE53 /* Main.storyboard */,
 				51BF45411F3876CC0011FE53 /* ApplicationViewControllers */,
+				513CD6901F3C780A00A35E9A /* Enums */,
 				513CD66F1F39CD3C00A35E9A /* Helpers */,
+				513CD68D1F3C72E900A35E9A /* Models */,
 				513CD6861F3B104A00A35E9A /* Networking */,
 				51BF45421F3876E10011FE53 /* Resources */,
 				51BF45431F3877010011FE53 /* SupportingFiles */,
@@ -310,10 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513CD68C1F3C6DF500A35E9A /* SearchService.swift in Sources */,
+				513CD68F1F3C731B00A35E9A /* Profile.swift in Sources */,
 				513CD68A1F3B10E500A35E9A /* Router.swift in Sources */,
 				513CD67E1F3A53F600A35E9A /* UITableView+RegisterCells.swift in Sources */,
 				513CD6721F39CD9100A35E9A /* UIColor+AppColors.swift in Sources */,
 				51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */,
+				513CD6921F3C782B00A35E9A /* APIEnums.swift in Sources */,
 				513CD6761F39D82500A35E9A /* SearchViewController.swift in Sources */,
 				513CD66C1F39CBA400A35E9A /* SplashScreenViewController.swift in Sources */,
 				513CD67B1F3A50CD00A35E9A /* ProfileCell.swift in Sources */,

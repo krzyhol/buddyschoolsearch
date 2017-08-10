@@ -17,7 +17,8 @@ final class SearchViewController: UIViewController {
     }
     
     private let searchController = UISearchController(searchResultsController: nil)
-    
+    fileprivate var profiles: [Profile]?
+
     @IBOutlet private weak var resultTableView: UITableView! {
         didSet {
             resultTableView.delegate = self
@@ -30,10 +31,24 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         setSearchControllerProperties()
+        fetchProfiles()
+    }
+    
+    private func fetchProfiles() {
+        SearchService.getProfiles(forKeyword: "english") { [weak self] apiResult in
+            guard let weakSelf = self else { return }
+            switch apiResult {
+            case .Success(let profiles):
+                weakSelf.profiles = profiles
+                weakSelf.resultTableView.reloadData()
+            case .Error:
+                print("błąd")
+            }
+        }
     }
     
     private func setSearchControllerProperties() {
-        //        searchController.searchResultsUpdater = self // Will be used later
+//        searchController.searchResultsUpdater = self // Will be used later
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         resultTableView.tableHeaderView = searchController.searchBar
@@ -48,17 +63,18 @@ extension SearchViewController: UITableViewDelegate {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        guard let profiles = profiles, !profiles.isEmpty else { return 1 }
+        return profiles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
-        if indexPath.row == 0 {
+        if let profiles = profiles, !profiles.isEmpty {
+            cell = tableView.dequeueReusableCell(withIdentifier: ViewConstants.reusableProfileCellIdentifier, for: indexPath) as! ProfileCell
+        } else {
             let infoCell = tableView.dequeueReusableCell(withIdentifier: ViewConstants.reusableInfoCellIdentifier, for: indexPath) as! InfoCell
             infoCell.decorate(withText: ViewConstants.noMatchesInfoText)
             cell = infoCell
-        } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: ViewConstants.reusableProfileCellIdentifier, for: indexPath) as! ProfileCell
         }
         return cell
     }
