@@ -25,9 +25,13 @@ final class ProfileCell: UITableViewCell {
     
     private func fetchImage(withURL imageURL: URL?) {
         guard let url = imageURL else { return }
-        let urlContents = try? Data(contentsOf: url)
-        guard let imageData = urlContents else { return }
-        profileImageView.image = UIImage(data: imageData)
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            let urlContents = try? Data(contentsOf: url)
+            guard let imageData = urlContents else { return }
+            DispatchQueue.main.async {
+                self?.profileImageView.image = UIImage(data: imageData)
+            }
+        }
     }
     
     class var defaultHeight: CGFloat {
