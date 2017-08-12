@@ -7,3 +7,9 @@ target 'Buddy School Search' do
   pod 'ObjectMapper', '~> 2.2'
 
 end
+
+target 'Buddy School Search Tests' do
+    
+    pod 'ObjectMapper', '~> 2.2'
+    
+end

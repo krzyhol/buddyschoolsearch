@@ -1,0 +1,24 @@
+
+[
+ {
+ "teacher_login":"erni.kasia",
+ "teacher_photo":"\/img\/frontend\/avatars\/1419789272_68905862fd6aa00deb491ed30c3e6e7b.jpg",
+ "profile_title":"Polish lessons via Skype",
+ "profile_price":"26.67 USD",
+ "profile_url":"\/profile\/show-profile\/52894\/polish-lessons-via-skype"
+ },
+ {
+ "teacher_login":"polish.stories",
+ "teacher_photo":"\/img\/frontend\/avatars\/1477040564_1fa76d840f0986e339705e856fa4c8e5.png",
+ "profile_title":"Polish Online Classes",
+ "profile_price":"17.33 USD",
+ "profile_url":"\/profile\/show-profile\/79801\/polish-online-classes"
+ },
+ {
+ "teacher_login":"kasiakasia",
+ "teacher_photo":"\/img\/frontend\/avatars\/1479979256_4660a821b85b827d945e97e629eb7473.jpg",
+ "profile_title":"POLISH FOR FOREIGNERS",
+ "profile_price":"12.00 USD",
+ "profile_url":"\/profile\/show-profile\/80261\/polish-for-foreigners"
+ }
+]
