@@ -34,6 +34,17 @@ final class SearchViewController: UIViewController {
         fetchProfiles()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let profileViewController = (segue.destination as? ProfileViewController), let profile = (sender as? Profile) {
+            profileViewController.title = profile.teacherLogin
+            profileViewController.profileUrl = profile.profileUrl
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+        }
+    }
+    
     private func fetchProfiles() {
         SearchService.getProfiles(forKeyword: "english") { [weak self] apiResult in
             guard let weakSelf = self else { return }
@@ -58,6 +69,10 @@ final class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ProfileCell.defaultHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showProfileVC", sender: profiles?[indexPath.row])
     }
 }
 

@@ -74,11 +74,45 @@
                     <navigationItem key="navigationItem" title="Buddy School" id="yVO-Fh-VMY"/>
                     <connections>
                         <outlet property="resultTableView" destination="ja3-Io-GYY" id="Yw1-tt-rPq"/>
+                        <segue destination="oCv-IW-jVd" kind="show" identifier="showProfileVC" id="fCX-ZP-N0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFV-nF-Qf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2460" y="37.331334332833585"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="8t9-N7-nfA">
+            <objects>
+                <viewController id="oCv-IW-jVd" customClass="ProfileViewController" customModule="Buddy_School_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ASG-Dp-EFK"/>
+                        <viewControllerLayoutGuide type="bottom" id="9KB-5D-bKI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IpC-sR-XOn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1Y-Wa-lQH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u1Y-Wa-lQH" firstAttribute="leading" secondItem="IpC-sR-XOn" secondAttribute="leading" id="516-LF-Smt"/>
+                            <constraint firstItem="u1Y-Wa-lQH" firstAttribute="top" secondItem="IpC-sR-XOn" secondAttribute="top" id="6FU-s9-abW"/>
+                            <constraint firstAttribute="trailing" secondItem="u1Y-Wa-lQH" secondAttribute="trailing" id="OGI-zV-Qee"/>
+                            <constraint firstItem="u1Y-Wa-lQH" firstAttribute="bottom" secondItem="9KB-5D-bKI" secondAttribute="top" id="Rlm-78-N1q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="u1Y-Wa-lQH" id="OWb-fp-TGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEk-Z8-l0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3181.5999999999999" y="37.331334332833585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kZf-eZ-t0e">
