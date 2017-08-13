@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,6 +36,16 @@
                BlueprintIdentifier = "518E3E8B1F3F2C1300A09F4F"
                BuildableName = "Buddy School Search Tests.xctest"
                BlueprintName = "Buddy School Search Tests"
+               ReferencedContainer = "container:Buddy School Search.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "518E3EA61F40B79800A09F4F"
+               BuildableName = "Buddy School Search Intergration Tests.xctest"
+               BlueprintName = "Buddy School Search Intergration Tests"
                ReferencedContainer = "container:Buddy School Search.xcodeproj">
             </BuildableReference>
          </TestableReference>

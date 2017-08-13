@@ -22,6 +22,7 @@
 		518E3E871F3F100000A09F4F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518E3E861F3F100000A09F4F /* ProfileViewController.swift */; };
 		518E3E9A1F3F425000A09F4F /* ProfileModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518E3E991F3F425000A09F4F /* ProfileModelTests.swift */; };
 		518E3EA21F3F937B00A09F4F /* profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 518E3EA11F3F937B00A09F4F /* profiles.json */; };
+		518E3EB61F40C08E00A09F4F /* SearchServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518E3EB51F40C08E00A09F4F /* SearchServiceIntegrationTests.swift */; };
 		51BF45301F3876A60011FE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF452F1F3876A60011FE53 /* AppDelegate.swift */; };
 		51BF45351F3876A60011FE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45331F3876A60011FE53 /* Main.storyboard */; };
 		51BF45371F3876A60011FE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF45361F3876A60011FE53 /* Assets.xcassets */; };
@@ -32,6 +33,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		518E3E911F3F2C1300A09F4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51BF45241F3876A60011FE53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51BF452B1F3876A60011FE53;
+			remoteInfo = "Buddy School Search";
+		};
+		518E3EAC1F40B79800A09F4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51BF45241F3876A60011FE53 /* Project object */;
 			proxyType = 1;
@@ -59,6 +67,9 @@
 		518E3E901F3F2C1300A09F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		518E3E991F3F425000A09F4F /* ProfileModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileModelTests.swift; path = Cases/ProfileModelTests.swift; sourceTree = "<group>"; };
 		518E3EA11F3F937B00A09F4F /* profiles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = profiles.json; path = Data/profiles.json; sourceTree = "<group>"; };
+		518E3EA71F40B79800A09F4F /* Buddy School Search Intergration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Buddy School Search Intergration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		518E3EAB1F40B79800A09F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		518E3EB51F40C08E00A09F4F /* SearchServiceIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchServiceIntegrationTests.swift; path = Cases/SearchServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		51BF452C1F3876A60011FE53 /* Buddy School Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buddy School Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF452F1F3876A60011FE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BF45341F3876A60011FE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +89,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E519CB467DE123FFD877809 /* Pods_Buddy_School_Search_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		518E3EA41F40B79800A09F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,11 +231,37 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		518E3EA81F40B79800A09F4F /* Buddy School Search Intergration Tests */ = {
+			isa = PBXGroup;
+			children = (
+				518E3EB21F40B7C100A09F4F /* Cases */,
+				518E3EB11F40B7B300A09F4F /* SupportingFiles */,
+			);
+			path = "Buddy School Search Intergration Tests";
+			sourceTree = "<group>";
+		};
+		518E3EB11F40B7B300A09F4F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				518E3EAB1F40B79800A09F4F /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		518E3EB21F40B7C100A09F4F /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				518E3EB51F40C08E00A09F4F /* SearchServiceIntegrationTests.swift */,
+			);
+			name = Cases;
+			sourceTree = "<group>";
+		};
 		51BF45231F3876A60011FE53 = {
 			isa = PBXGroup;
 			children = (
 				51BF452E1F3876A60011FE53 /* Buddy School Search */,
 				518E3E8D1F3F2C1300A09F4F /* Buddy School Search Tests */,
+				518E3EA81F40B79800A09F4F /* Buddy School Search Intergration Tests */,
 				51BF452D1F3876A60011FE53 /* Products */,
 				DA9D131C3CE30EC9D817BEBA /* Pods */,
 				480999C8A7800840F5FF580B /* Frameworks */,
@@ -229,6 +273,7 @@
 			children = (
 				51BF452C1F3876A60011FE53 /* Buddy School Search.app */,
 				518E3E8C1F3F2C1300A09F4F /* Buddy School Search Tests.xctest */,
+				518E3EA71F40B79800A09F4F /* Buddy School Search Intergration Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,6 +356,24 @@
 			productReference = 518E3E8C1F3F2C1300A09F4F /* Buddy School Search Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		518E3EA61F40B79800A09F4F /* Buddy School Search Intergration Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 518E3EB01F40B79800A09F4F /* Build configuration list for PBXNativeTarget "Buddy School Search Intergration Tests" */;
+			buildPhases = (
+				518E3EA31F40B79800A09F4F /* Sources */,
+				518E3EA41F40B79800A09F4F /* Frameworks */,
+				518E3EA51F40B79800A09F4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				518E3EAD1F40B79800A09F4F /* PBXTargetDependency */,
+			);
+			name = "Buddy School Search Intergration Tests";
+			productName = "Buddy School Search Intergration Tests";
+			productReference = 518E3EA71F40B79800A09F4F /* Buddy School Search Intergration Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		51BF452B1F3876A60011FE53 /* Buddy School Search */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51BF453E1F3876A60011FE53 /* Build configuration list for PBXNativeTarget "Buddy School Search" */;
@@ -348,6 +411,13 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 51BF452B1F3876A60011FE53;
 					};
+					518E3EA61F40B79800A09F4F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = LLD6V5Z3T2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 51BF452B1F3876A60011FE53;
+					};
 					51BF452B1F3876A60011FE53 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = LLD6V5Z3T2;
@@ -370,6 +440,7 @@
 			targets = (
 				51BF452B1F3876A60011FE53 /* Buddy School Search */,
 				518E3E8B1F3F2C1300A09F4F /* Buddy School Search Tests */,
+				518E3EA61F40B79800A09F4F /* Buddy School Search Intergration Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -380,6 +451,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				518E3EA21F3F937B00A09F4F /* profiles.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		518E3EA51F40B79800A09F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +577,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		518E3EA31F40B79800A09F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				518E3EB61F40C08E00A09F4F /* SearchServiceIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51BF45281F3876A60011FE53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,6 +611,11 @@
 			isa = PBXTargetDependency;
 			target = 51BF452B1F3876A60011FE53 /* Buddy School Search */;
 			targetProxy = 518E3E911F3F2C1300A09F4F /* PBXContainerItemProxy */;
+		};
+		518E3EAD1F40B79800A09F4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51BF452B1F3876A60011FE53 /* Buddy School Search */;
+			targetProxy = 518E3EAC1F40B79800A09F4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -575,6 +666,37 @@
 				INFOPLIST_FILE = "Buddy School Search Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appstarter.Buddy-School-Search-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buddy School Search.app/Buddy School Search";
+			};
+			name = Release;
+		};
+		518E3EAE1F40B79800A09F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LLD6V5Z3T2;
+				INFOPLIST_FILE = "Buddy School Search Intergration Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appstarter.Buddy-School-Search-Intergration-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buddy School Search.app/Buddy School Search";
+			};
+			name = Debug;
+		};
+		518E3EAF1F40B79800A09F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LLD6V5Z3T2;
+				INFOPLIST_FILE = "Buddy School Search Intergration Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appstarter.Buddy-School-Search-Intergration-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buddy School Search.app/Buddy School Search";
@@ -712,6 +834,15 @@
 			buildConfigurations = (
 				518E3E931F3F2C1300A09F4F /* Debug */,
 				518E3E941F3F2C1300A09F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		518E3EB01F40B79800A09F4F /* Build configuration list for PBXNativeTarget "Buddy School Search Intergration Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				518E3EAE1F40B79800A09F4F /* Debug */,
+				518E3EAF1F40B79800A09F4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

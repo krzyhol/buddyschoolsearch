@@ -17,6 +17,8 @@ class ProfileModelTests: XCTestCase {
     var profiles: [Profile]?
     
     override func setUp() {
+        super.setUp()
+        
         guard let filePath = Bundle(for: ProfileModelTests.self).url(forResource: "profiles", withExtension: "json") else { return }
         guard let data = try? Data(contentsOf: filePath) else { return }
         guard let jsonData = try? JSONSerialization.jsonObject(with: data as Data, options: []) else { return }
