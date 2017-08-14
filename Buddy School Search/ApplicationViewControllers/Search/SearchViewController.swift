@@ -19,7 +19,7 @@ final class SearchViewController: UIViewController {
     private let searchController = UISearchController(searchResultsController: nil)
     fileprivate var profiles: [Profile]?
 
-    @IBOutlet private weak var resultTableView: UITableView! {
+    @IBOutlet fileprivate weak var resultTableView: UITableView! {
         didSet {
             resultTableView.delegate = self
             resultTableView.dataSource = self
@@ -31,7 +31,6 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         setSearchControllerProperties()
-        fetchProfiles()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,8 +44,8 @@ final class SearchViewController: UIViewController {
         }
     }
     
-    private func fetchProfiles() {
-        SearchService.getProfiles(forKeyword: "english") { [weak self] apiResult in
+    fileprivate func fetchProfiles(withKeyword keyword: String) {
+        SearchService.getProfiles(forKeyword: keyword) { [weak self] apiResult in
             guard let weakSelf = self else { return }
             switch apiResult {
             case .Success(let profiles):
@@ -59,7 +58,7 @@ final class SearchViewController: UIViewController {
     }
     
     private func setSearchControllerProperties() {
-//        searchController.searchResultsUpdater = self // Will be used later
+        searchController.searchBar.delegate = self // Will be used later
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         resultTableView.tableHeaderView = searchController.searchBar
@@ -94,5 +93,16 @@ extension SearchViewController: UITableViewDataSource {
             cell = infoCell
         }
         return cell
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        fetchProfiles(withKeyword: searchBar.text ?? "")
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        profiles = nil
+        resultTableView.reloadData()
     }
 }
